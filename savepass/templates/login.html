@@ -13,24 +13,23 @@
     </pre>
     <pre>
         <h1>
-            Welcome back
+            Welcome back {{mail}}
             <h3>
                 Please Enter Your Account Details 
             </h3>
         </h1>
     </pre>
 <pre>
-    <form action="/action.php">
-                     <input type="text" placeholder=" write your name">
+    <form action="login" method="post">
+        {% csrf_token %}
+                    <input name="name" type="text" placeholder=" write your name">
 
-                     <input type="text" placeholder="enter your email">
+                     <input name="mail" type="text" placeholder="enter your email">
 
-                     <input type="password" placeholder="enter password">
+                     <input name="password" type="password" placeholder="enter password">
 
                      <input type="submit" value="sign up"> 
-
-
-</form>
+    </form>
 
 </pre>
 </body>
