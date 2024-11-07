@@ -13,7 +13,9 @@
     </pre>
     <pre>
         <h1>
-            Welcome back {{mail}}
+            Welcome back {% for name in name %}
+            {{name}}
+            {% endfor %}
             <h3>
                 Please Enter Your Account Details 
             </h3>
